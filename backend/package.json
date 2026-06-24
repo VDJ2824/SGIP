@@ -1,0 +1,30 @@
+{
+  "name": "sgip-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js",
+    "check": "node --check server.js",
+    "seed:career-roles": "node scripts/seedCareerRoles.js",
+    "seed:admin": "node src/seeds/seedAdmin.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.7.0",
+    "compression": "^1.8.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mammoth": "^1.12.0",
+    "mongoose": "^8.18.0",
+    "multer": "^2.2.0",
+    "nodemailer": "^6.10.1",
+    "pdf-parse": "^2.4.5",
+    "pdfkit": "^0.19.1",
+    "zod": "^4.0.17"
+  }
+}

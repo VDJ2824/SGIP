@@ -1,0 +1,45 @@
+import {
+  LayoutDashboard,
+  UserCircle2,
+  BadgeCheck,
+  BriefcaseBusiness,
+  GitMerge,
+  Route,
+  FileBarChart2,
+  BellRing,
+  House,
+  FileUp,
+  ShieldCheck,
+  UsersRound,
+  Sparkles,
+  ChartNoAxesCombined,
+  ScrollText,
+} from 'lucide-react';
+
+export const publicNavigation = [
+  { label: 'Home', to: '/', icon: House },
+  { label: 'Dashboard', to: '/dashboard', icon: LayoutDashboard },
+];
+
+export const dashboardNavigation = [
+  { label: 'Dashboard', to: '/dashboard', icon: LayoutDashboard, roles: ['student'] },
+  { label: 'Profile', to: '/profile', icon: UserCircle2, roles: ['student'] },
+  { label: 'Resume Parser', to: '/resumes', icon: FileUp, roles: ['student'] },
+  { label: 'Skill Evidence', to: '/evidence', icon: BadgeCheck, roles: ['student'] },
+  { label: 'Mentor Dashboard', to: '/mentor/dashboard', icon: LayoutDashboard, roles: ['mentor'] },
+  { label: 'Assigned Students', to: '/mentor/students', icon: UsersRound, roles: ['mentor'] },
+  { label: 'Evidence Review', to: '/mentor/evidence-review', icon: BadgeCheck, roles: ['mentor'] },
+  { label: 'Review History', to: '/mentor/reviews', icon: ScrollText, roles: ['mentor'] },
+  { label: 'Admin Dashboard', to: '/admin/dashboard', icon: LayoutDashboard, roles: ['admin'] },
+  { label: 'Mentors', to: '/admin/mentors', icon: ShieldCheck, roles: ['admin'] },
+  { label: 'Students', to: '/admin/students', icon: UsersRound, roles: ['admin'] },
+  { label: 'Career Roles', to: '/admin/career-roles', icon: BriefcaseBusiness, roles: ['admin'] },
+  { label: 'AI Role Review', to: '/admin/career-roles/review', icon: Sparkles, roles: ['admin'] },
+  { label: 'Analytics', to: '/admin/analytics', icon: ChartNoAxesCombined, roles: ['admin'] },
+  { label: 'Activity Log', to: '/admin/activity', icon: ScrollText, roles: ['admin'] },
+  { label: 'Career Roles', to: '/roles', icon: BriefcaseBusiness, roles: ['student'] },
+  { label: 'Gap Analysis', to: '/gaps', icon: GitMerge, roles: ['student'] },
+  { label: 'Roadmap', to: '/roadmap', icon: Route, roles: ['student'] },
+  { label: 'Reports', to: '/reports', icon: FileBarChart2, roles: ['student'] },
+  { label: 'Notifications', to: '/notifications', icon: BellRing, roles: ['student'] },
+];
