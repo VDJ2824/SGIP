@@ -52,6 +52,7 @@ async function issueOtp(user, purpose) {
         'Unable to send OTP email right now. Please check email service configuration.',
         503,
         error?.code || 'EMAIL_DELIVERY_FAILED',
+        error?.details || { emailErrorCode: error?.code || 'EMAIL_DELIVERY_FAILED' },
       );
     }
 

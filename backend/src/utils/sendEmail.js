@@ -8,7 +8,7 @@ function withTimeout(promise, timeoutMs) {
 
   const timeout = new Promise((_, reject) => {
     timeoutId = setTimeout(() => {
-      reject(new AppError('Email delivery timed out', 503, 'EMAIL_SEND_TIMEOUT'));
+      reject(new AppError('Email delivery timed out', 503, 'EMAIL_SEND_TIMEOUT', { timeoutMs }));
     }, timeoutMs);
   });
 
@@ -43,6 +43,10 @@ export async function sendEmail({ to, subject, text, html }) {
       throw error;
     }
 
-    throw new AppError('Email service could not deliver the message', 503, 'EMAIL_DELIVERY_FAILED');
+    throw new AppError('Email service could not deliver the message', 503, 'EMAIL_DELIVERY_FAILED', {
+      providerCode: error?.code || null,
+      providerResponseCode: error?.responseCode || null,
+      providerCommand: error?.command || null,
+    });
   }
 }
